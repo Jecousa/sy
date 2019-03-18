@@ -22,11 +22,15 @@
     {% include 'partials/_header.html' %}
  
     <!--Body-->
-    {% block content %}
-    {% endblock %}
+    <div class="body">
+            {% block content %}
+            {% endblock %}
+    </div>
+        
+    
 
-    <!--Footer-->
-    {% include 'partials/_footer.html'%}
+<!--Footer-->
+{% include 'partials/_footer.html'%}
 
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -41,6 +45,9 @@
 
         <!--Custom JS-->
         <script src="{% static 'js.main.js' %}"></script>
+        
+    
 </body>
+
 
 </html>
