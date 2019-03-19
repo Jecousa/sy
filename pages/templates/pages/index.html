@@ -1,5 +1,53 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{%block content %}
-<h1>Home</h1>
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" id="intro">
+    <div class="row justify-content-center">
+        <div class="intro-content">
+                <h1 class="display-4">Strange Yoga</h1>
+                <br>
+                <p class="lead">Something about Yoga</p>
+                <hr>
+                <i class="fab fa-facebook-square main-icon"></i><i class="fab fa-instagram main-icon"></i><i
+                    class="fab fa-twitter main-icon"></i>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="container" id="intro-body">
+    <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum."
+    </p>
+    <div class="row justify-content-center">
+        <div class="col-md" id="events">
+            {% if events %}
+            {% for event in events %}
+            <p>{{event.title}}</p>
+            <p>{{event.description}}</p>
+            <a href="{% url 'event' event.id %}"> More Info</a>
+            {% endfor %}
+            {% else %}
+            <div class="col-md-12">
+                <h4>No Events</h4>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md" id="updates">
+            test2
+        </div>
+    </div>
+</div>
+
 {% endblock %}

@@ -1,0 +1,19 @@
+
+.intro-content>h1,p,a{
+    text-align: center;
+}
+
+.intro-content>i{
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+}
+#intro{
+    height: 20rem;
+    background: green;
+    padding: 2rem;
+    
+}
+#intro-body{
+    margin: 2rem 0 0 0;
+}

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #Custom Apps
     'pages.apps.PagesConfig',
     'events.apps.EventsConfig',
+    'services.apps.ServicesConfig',
     #Pre-installed
     'django.contrib.admin',
     'django.contrib.auth',
