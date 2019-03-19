@@ -1,0 +1,9 @@
+MODEL/DB FIELDS
+
+###EVENT
+id: INT
+title: STR
+date: DATE
+description: STR
+detail: TEXT
+photo: STR

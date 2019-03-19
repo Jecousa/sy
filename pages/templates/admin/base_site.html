@@ -1,0 +1,13 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+    <h1 id='company_name'>
+        Strange Yoga
+        <img src="{% static 'admin/img/search.svg' %}" alt="Need to replace the logo" height="50px" 
+        width="50px" class="brand_img">Admin
+    </h1>
+{% endblock %}
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'admin/css/custom.css' %}">
+{% endblock %}

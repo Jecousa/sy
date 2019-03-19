@@ -10,9 +10,13 @@
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     crossorigin="anonymous">
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+     crossorigin="anonymous">
+    {% block extrahead %}{% endblock %}
 
 </head>
 
@@ -22,11 +26,15 @@
     {% include 'partials/_header.html' %}
  
     <!--Body-->
-    {% block content %}
-    {% endblock %}
+    <div class="body">
+            {% block content %}
+            {% endblock %}
+    </div>
+        
+    
 
-    <!--Footer-->
-    {% include 'partials/_footer.html'%}
+<!--Footer-->
+{% include 'partials/_footer.html'%}
 
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -40,7 +48,10 @@
         crossorigin="anonymous"></script>
 
         <!--Custom JS-->
-        <script src="{% static 'js.main.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        
+    
 </body>
+
 
 </html>

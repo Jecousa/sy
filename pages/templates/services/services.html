@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Services test</h1>
+{% if services %}
+  {% for service in services %}
+    <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{service.title}}</h5>
+              {% if service.photo %}
+                <img src="{{ service.photo.url }}" alt="" class="service_img">
+              {% endif %}
+              </div>
+              <p class="mb-1">{{service.description}}</small>
+            </a>
+          </div>
+  {% endfor %}
+  {% else %}
+      <p>no services</p>
+  {% endif %}
+{% endblock %}

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #Custom Apps
     'pages.apps.PagesConfig',
     'events.apps.EventsConfig',
+    'services.apps.ServicesConfig',
     #Pre-installed
     'django.contrib.admin',
     'django.contrib.auth',
@@ -79,8 +80,11 @@ WSGI_APPLICATION = 'sy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sy',
+        'USER': 'postgres',
+        'PASSWORD': '1qaz@WSX1qaz@WSX',
+        'HOST': 'localhost'
     }
 }
 
@@ -124,3 +128,6 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'sy/static')]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
