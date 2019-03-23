@@ -18,10 +18,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from graphene_django.views import GraphQLView
+from sy.schema import schema
+
 urlpatterns = [
     path('', include('pages.urls')),
     path('events/', include('events.urls')),
     path('services/', include('services.urls')),
     path('admin/', admin.site.urls),
+    #graphql admin
+    path('graphql/', GraphQLView.as_view(graphiql=True, schema=schema)),
 ]   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
