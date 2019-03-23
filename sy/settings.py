@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #3rd Party Apps
+    'graphene_django',
+
 ]
 
 MIDDLEWARE = [
@@ -131,3 +134,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'sy/static')]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#Graphene Schemas
+
+GRAPHENE = {
+    'SCHEMA': 'services.schema.schema'
+}
